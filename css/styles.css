@@ -1,17 +1,62 @@
+
+:root {
+    --dark-bg: #0b0f19;
+    --dark-card: #151c2e;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --primary: #6366f1;
+    --accent: #f43f5e;
+    --text-white: #ffffff;
+    --text-body: #cbd5e1;
+    --text-muted: #94a3b8;
+    --font-heading: \'Outfit\', sans-serif;
+    --font-body: \'Plus Jakarta Sans\', sans-serif;
+    --radius-lg: 16px;
+    --radius-sm: 8px;
+    --glow-primary: 0 0 35px rgba(99, 102, 241, 0.25);
+    --glow-accent: 0 0 35px rgba(244, 63, 94, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-body);
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .hero.hero-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        text-align: left;
+        max-width: 1200px;
+    }
+    .hero.hero-split .hero-ctas {
+        justify-content: flex-start;
+    }
+}
+
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+.price-card.popular, .btn-accent {
+    box-shadow: var(--glow-accent);
+}
 /* Styles from about-us.html */
 
-        :root {
-            --primary: #6366f1;
-            --primary-hover: #4f46e5;
-            --accent: #f43f5e;
-            --dark: #0f172a;
-            --dark-card: #1e293b;
-            --text-gray: #94a3b8;
-            --radius: 12px;
-        }
+        
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--dark); color: #ffffff; line-height: 1.6; }
+        
+        
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
@@ -44,18 +89,10 @@
     
 /* Styles from audio-guestbook-hire.html */
 
-        :root {
-            --primary: #6366f1;
-            --primary-hover: #4f46e5;
-            --accent: #f43f5e;
-            --dark: #0f172a;
-            --dark-card: #1e293b;
-            --text-gray: #94a3b8;
-            --radius: 12px;
-        }
+        
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--dark); color: #ffffff; line-height: 1.6; }
+        
+        
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
@@ -87,18 +124,10 @@
     
 /* Styles from check-availability.html */
 
-        :root {
-            --primary: #6366f1;
-            --primary-hover: #4f46e5;
-            --accent: #f43f5e;
-            --dark: #0f172a;
-            --dark-card: #1e293b;
-            --text-gray: #94a3b8;
-            --radius: 12px;
-        }
+        
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--dark); color: #ffffff; line-height: 1.6; }
+        
+        
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
@@ -131,9 +160,9 @@
     
 /* Styles from contact.html */
 
-        :root { --primary: #6366f1; --dark: #0f172a; --dark-card: #1e293b; --text-gray: #94a3b8; --radius: 12px; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--dark); color: #fff; line-height: 1.6; }
+        
+        
+        
         .container { max-width: 800px; margin: 0 auto; padding: 50px 20px; }
         .card { background: var(--dark-card); padding: 40px; border-radius: var(--radius); }
         .form-group { margin-bottom: 20px; }
@@ -143,29 +172,11 @@
     
 /* Styles from index.html */
 
-        :root {
-            --primary: #6366f1;
-            --primary-hover: #4f46e5;
-            --accent: #f43f5e;
-            --dark: #0f172a;
-            --dark-card: #1e293b;
-            --light: #f8fafc;
-            --text-gray: #94a3b8;
-            --radius: 12px;
-        }
+        
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+        
 
-        body {
-            background-color: var(--dark);
-            color: #ffffff;
-            line-height: 1.6;
-        }
+        
 
         /* Container */
         .container {
@@ -440,9 +451,9 @@
     
 /* Styles from privacy-policy.html */
 
-        :root { --primary: #6366f1; --dark: #0f172a; --dark-card: #1e293b; --text-gray: #94a3b8; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--dark); color: #fff; line-height: 1.6; }
+        
+        
+        
         .container { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
         .card { background: var(--dark-card); padding: 40px; border-radius: 12px; }
         h1 { margin-bottom: 20px; font-size: 2rem; }
@@ -451,9 +462,9 @@
     
 /* Styles from terms-and-conditions.html */
 
-        :root { --primary: #6366f1; --dark: #0f172a; --dark-card: #1e293b; --text-gray: #94a3b8; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-        body { background-color: var(--dark); color: #fff; line-height: 1.6; }
+        
+        
+        
         .container { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
         .card { background: var(--dark-card); padding: 40px; border-radius: 12px; }
         h1 { margin-bottom: 20px; font-size: 2rem; }
