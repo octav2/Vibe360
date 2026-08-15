@@ -274,8 +274,8 @@ function coverage(loc) {
     <section class="section coverage-section">
         <div class="container">
             <h2>Photo Booth Hire Areas Covered Near ${loc.name}</h2>
-            <p>In addition to ${loc.name}, we provide full delivery and event hosting services across all adjacent South Buckinghamshire locations:</p>
-                                    <div class="coverage-grid loc-coverage">
+                        <p>In addition to ${loc.name}, we provide full delivery and event hosting services across all adjacent South Buckinghamshire locations:</p>
+            <div class="coverage-grid loc-coverage">
                 <span class="area-pill current">${loc.name} (you are here)</span>
                 ${items}
             </div>
