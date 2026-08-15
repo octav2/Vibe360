@@ -901,3 +901,46 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
     .nav-cta { display: none; }
     .nav-links { right: 0; }
 }
+
+/* =============================================================
+   VIBE360 — About Page Styles (Compliance & Coverage)
+   ============================================================= */
+.compliance-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: var(--glow-primary);
+    max-width: 860px;
+    margin: 0 auto;
+}
+.compliance-list {
+    list-style: none;
+    display: grid;
+    gap: 20px;
+}
+.compliance-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+.compliance-list svg.check-green {
+    color: #10b981;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.compliance-list span { color: var(--text-gray); font-size: 0.98rem; }
+.compliance-list strong { color: #fff; }
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--glow-primary);
+}
+
+/* About page sections live inside a .container, so reduce top padding spike */
+#compliance, #why-us, #how-we-work, #areas { padding: 60px 0; }
