@@ -1115,30 +1115,62 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 .pricing-card ul.price-feats li { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: var(--text-body); font-size: 0.9rem; }
 .pricing-card .btn { margin-top: auto; }
 
-/* ---- Coverage / surrounding areas ---- */
-.coverage-grid.loc-coverage {
+/* ---- Coverage / surrounding areas (styled Location Card) ---- */
+.coverage-section { padding: 54px 0; }
+.locations-card {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 42rem;
+  text-align: center;
+}
+.coverage-section .section-title h2,
+.locations-card h2 { font-size: 1.95rem; margin-bottom: 8px; }
+.coverage-intro {
+  color: var(--text-gray);
+  font-size: 0.92rem;
+  max-width: 640px;
+  margin: 0 auto 22px;
+}
+.loc-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
   justify-items: center;
 }
-@media (min-width: 640px) { .coverage-grid.loc-coverage { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 768px) { .coverage-grid.loc-coverage { grid-template-columns: repeat(5, 1fr); } }
 .area-pill {
-  background: var(--dark-card);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  color: var(--text-body);
-  padding: 8px 14px;
-  border-radius: 9999px;
-  font-size: 0.85rem;
-  text-decoration: none;
-  text-align: center;
-  cursor: default;
-  transition: all .2s;
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all .2s ease;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
 }
-.area-pill:hover { background: rgba(99, 102, 241, .1); border-color: var(--primary); color: #fff; }
-.area-pill.current { background: rgba(99, 102, 241, .15); border-color: var(--primary); color: #fff; pointer-events: none; }
+.area-pill i { color: var(--primary); font-size: 0.95rem; flex-shrink: 0; }
+.area-pill:hover {
+  border-color: #ec4899;
+  color: #ffffff;
+  background: #334155;
+  transform: translateY(-2px);
+}
+.area-pill-active {
+  background: rgba(236, 72, 153, 0.15);
+  border: 1px solid #ec4899;
+  color: #f472b6;
+  font-weight: 600;
+  cursor: default;
+  pointer-events: none;
+}
 
 /* ---- FAQ accordion ---- */
 .faq-item {

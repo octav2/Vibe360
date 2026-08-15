@@ -88,11 +88,12 @@ function navig() {
     <header class="site-header">
         <div class="container nav">
             <nav>
-                <a href="/" class="logo">VIBE<span>360</span></a>
+                                <a href="/" class="logo">VIBE<span>360</span></a>
                 <ul class="nav-links">
-                    <li><a href="/about-us.html">About Us</a></li>
+                    <li><a href="/about.html">About Us</a></li>
                     <li><a href="/#services">Services</a></li>
-                    <li><a href="/#pricing">Price</a></li>
+                    <li><a href="/#pricing">Packages &amp; Pricing</a></li>
+                    <li><a href="/#gallery">Gallery</a></li>
                 </ul>
                 <a href="/check-availability.html" class="btn btn-pink nav-cta">Book Now</a>
                 <button class="nav-toggle" aria-label="Toggle navigation menu">
@@ -164,7 +165,7 @@ function services(loc) {
                         <li>${CHECK} <span>Studio LED Halo Lighting</span></li>
                         <li>${CHECK} <span>Instant AirDrop &amp; QR Sharing</span></li>
                     </ul>
-                    <a href="${SVC.selfie}" class="btn btn-accent">Explore Selfie Pods</a>
+                                        <a href="${SVC.selfie}" class="btn btn-accent">View Selfie Pod Packages</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-video"></i></div>
@@ -175,7 +176,7 @@ function services(loc) {
                         <li>${CHECK} <span>Custom Music Tracks</span></li>
                         <li>${CHECK} <span>Dedicated Operator Team</span></li>
                     </ul>
-                    <a href="${SVC.three60}" class="btn btn-accent">Explore 360 Booths</a>
+                                        <a href="${SVC.three60}" class="btn btn-accent">View 360 Spin Packages</a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-phone"></i></div>
@@ -186,7 +187,7 @@ function services(loc) {
                         <li>${CHECK} <span>Unlimited Guest Voicemails</span></li>
                         <li>${CHECK} <span>Full MP3 Audio Gallery</span></li>
                     </ul>
-                    <a href="${SVC.audio}" class="btn btn-accent">Explore Audio Guestbooks</a>
+                                        <a href="${SVC.audio}" class="btn btn-accent">View Audio Guestbook</a>
                 </div>
             </div>
         </div>
@@ -266,18 +267,20 @@ function pricing() {
 function coverage(loc) {
   const items = locations
     .filter(l => l.slug !== loc.slug)
-    .map(l => `<a href="/locations/photo-booth-hire-${l.slug}" class="area-pill">${l.name}</a>`)
+        .map(l => `<a href="/locations/photo-booth-hire-${l.slug}" class="area-pill"><i class="fa-solid fa-location-dot"></i>${l.name}</a>`)
     .join('\n            ');
   return `    <!-- ============================================
          LOCAL AREA COVERAGE MATRIX
          ============================================ -->
     <section class="section coverage-section">
         <div class="container">
-            <h2>Photo Booth Hire Areas Covered Near ${loc.name}</h2>
-                        <p>In addition to ${loc.name}, we provide full delivery and event hosting services across all adjacent South Buckinghamshire locations:</p>
-            <div class="coverage-grid loc-coverage">
-                <span class="area-pill current">${loc.name} (you are here)</span>
-                ${items}
+                        <div class="locations-card">
+                <h2>Photo Booth Hire Areas Covered Near ${loc.name}</h2>
+                <p class="coverage-intro">In addition to ${loc.name}, we provide full delivery and event hosting services across all adjacent South Buckinghamshire locations:</p>
+                <div class="loc-grid">
+                    <span class="area-pill area-pill-active"><i class="fa-solid fa-location-dot"></i>${loc.name} (you are here)</span>
+                    ${items}
+                </div>
             </div>
         </div>
     </section>
@@ -350,10 +353,11 @@ function footer() {
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/about-us.html">About Us</a></li>
+                                <ul>
+                    <li><a href="/about.html">About Us</a></li>
                     <li><a href="/#services">Services</a></li>
-                    <li><a href="/#pricing">Price</a></li>
+                    <li><a href="/#pricing">Packages &amp; Pricing</a></li>
+                    <li><a href="/#gallery">Gallery</a></li>
                     <li><a href="/check-availability.html">Book Now</a></li>
                 </ul>
             </div>
