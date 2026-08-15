@@ -944,3 +944,63 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 
 /* About page sections live inside a .container, so reduce top padding spike */
 #compliance, #why-us, #how-we-work, #areas { padding: 60px 0; }
+
+/* =============================================================
+   VIBE360 — Service Landing Pages
+   ============================================================= */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    box-sizing: border-box;
+}
+.btn-outline:hover {
+    background: var(--primary);
+    color: #fff;
+}
+/* Service page hero trust badges */
+.service-hero .micro-trust { text-align: left; }
+.service-safety {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: var(--glow-primary);
+}
+.service-safety ul {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+    margin-top: 20px;
+}
+.service-safety li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--text-gray);
+}
+.service-safety li svg { color: #10b981; flex-shrink: 0; }
+.service-safety .safety-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+    margin-top: 26px;
+}
+.service-safety .safety-badge {
+    text-align: center;
+    padding: 20px 12px;
+    background: rgba(11, 15, 25, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius);
+}
+.service-safety .safety-badge strong { display: block; color: #fff; margin-bottom: 4px; font-size: 1.05rem; }
+.service-safety .safety-badge span { color: var(--text-gray); font-size: 0.85rem; }
+.bundle-note {
+    margin-top: 16px;
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 0.92rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 16px;
+}
+.bundle-note strong { color: var(--accent); }
