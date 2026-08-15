@@ -129,15 +129,14 @@ function hero(loc) {
 `;
 }
 function venues(loc) {
-  const pill = v => `<span class="venue-pill">${v}</span>`;
   return `    <!-- ============================================
          LOCAL VENUE PROOF BANNER
          ============================================ -->
     <section class="section venue-banner">
         <div class="container">
-            <div class="banner-text">Trusted by Top Venues &amp; Private Event Hosts In &amp; Around ${loc.name}</div>
-            <div class="venue-logo-grid">
-                ${loc.venues.map(pill).join('\n                ')}
+            <p class="venue-label">TRUSTED BY TOP VENUES &amp; EVENT HOSTS IN ${loc.name}</p>
+            <div class="venue-pills-container">
+                ${loc.venues.map(v => `<span class="venue-pill">${v}</span>`).join(' ')}
             </div>
         </div>
     </section>
@@ -197,7 +196,7 @@ function services(loc) {
 function why(loc) {
   const { name } = loc;
   return `    <!-- ============================================
-         WHY CHOOSE US
+         WHY EVENT PLANNERS CHOOSE US
          ============================================ -->
     <section class="section why-section">
         <div class="container">
@@ -205,11 +204,11 @@ function why(loc) {
                 <h2>Why Event Planners in ${name} Choose VIBE360</h2>
                 <p>We remove the stress so you can enjoy your event. Every detail is handled for your ${name} occasion, from risk assessment to post-event media.</p>
             </div>
-            <div class="value-grid">
-                <div class="value-card">${CHECK}<h3>Zero Local Delivery Surcharge</h3><p>We are local to Buckinghamshire, meaning full setup and pack-down in ${name} with no hidden mileage fees.</p></div>
-                <div class="value-card">${CHECK}<h3>100% Venue Compliance Guarantee</h3><p>We work directly with venue managers in ${name}, providing &pound;5M PLI certificates, PAT test labels, and full risk assessments.</p></div>
-                <div class="value-card">${CHECK}<h3>Instant Sharing Technology</h3><p>Guests scan a QR code or receive an AirDrop of their HD videos and photos in under 10 seconds.</p></div>
-                <div class="value-card">${CHECK}<h3>Flexible Booking Terms</h3><p>Reserve your ${name} event date in 60 seconds with a simple &pound;100 deposit and clear online management.</p></div>
+            <div class="grid-2x2">
+                <div class="why-card"><i class="fa-solid fa-truck"></i><h3>Zero Local Delivery Surcharge in ${name}</h3><p>We are local to Buckinghamshire, so full setup and pack-down in ${name} and all HP postcodes carries zero delivery surcharges. What you quote is what you pay.</p></div>
+                <div class="why-card"><i class="fa-solid fa-shield-halved"></i><h3>100% Venue Compliance Guarantee</h3><p>We provide &pound;5M Public Liability Insurance, annual PAT testing certificates, and full venue risk assessments to every ${name} venue.</p></div>
+                <div class="why-card"><i class="fa-solid fa-bolt"></i><h3>Instant Digital AirDrop &amp; QR Code Sharing</h3><p>Guests step off the platform and scan a QR code or receive an AirDrop of their HD videos in under 10 seconds.</p></div>
+                <div class="why-card"><i class="fa-solid fa-calendar-check"></i><h3>Flexible 60-Second Online Booking</h3><p>Reserve your ${name} date in one minute with a clear &pound;100 deposit. Manage your booking online, any time.</p></div>
             </div>
         </div>
     </section>
@@ -235,9 +234,10 @@ function pricing() {
                         <li>${CHECK} <span>Unlimited Photos &amp; GIFs</span></li>
                         <li>${CHECK} <span>Free Local Delivery</span></li>
                     </ul>
-                    <a href="/check-availability.html" class="btn btn-accent">Check Availability</a>
+                    <a href="/check-availability.html" class="btn btn-accent">Book Selfie Pod</a>
                 </div>
-                <div class="pricing-card featured">
+                <div class="pricing-card featured card-highlight">
+                    <span class="badge-popular">MOST POPULAR</span>
                     <h3>Standard 360 Video Experience (3 Hours)</h3>
                     <p class="price">From &pound;399</p>
                     <ul class="price-feats">
@@ -245,17 +245,18 @@ function pricing() {
                         <li>${CHECK} <span>Dedicated Operator</span></li>
                         <li>${CHECK} <span>Instant QR Sharing</span></li>
                     </ul>
-                    <a href="/check-availability.html" class="btn btn-pink">Check Availability</a>
+                    <a href="/check-availability.html" class="btn btn-pink">Book 360 Experience</a>
                 </div>
                 <div class="pricing-card">
+                    <span class="badge-bundle">SAVE &pound;150 BUNDLE</span>
                     <h3>VIP All-In-One Bundle (Selfie + 360 + Audio Phone)</h3>
-                    <p class="price">From &pound;549 <span class="bundle-note">(Save &pound;150)</span></p>
+                    <p class="price">From &pound;549</p>
                     <ul class="price-feats">
                         <li>${CHECK} <span>All Three Experiences</span></li>
                         <li>${CHECK} <span>Priority Booking</span></li>
                         <li>${CHECK} <span>Full-Day Coverage</span></li>
                     </ul>
-                    <a href="/check-availability.html" class="btn btn-accent">Check Availability</a>
+                    <a href="/check-availability.html" class="btn btn-accent">Reserve VIP Bundle</a>
                 </div>
             </div>
         </div>
@@ -274,7 +275,7 @@ function coverage(loc) {
         <div class="container">
             <h2>Photo Booth Hire Areas Covered Near ${loc.name}</h2>
             <p>In addition to ${loc.name}, we provide full delivery and event hosting services across all adjacent South Buckinghamshire locations:</p>
-            <div class="coverage-grid">
+                                    <div class="coverage-grid loc-coverage">
                 <span class="area-pill current">${loc.name} (you are here)</span>
                 ${items}
             </div>
@@ -343,8 +344,8 @@ function footer() {
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a href="/" class="logo">VIBE<span>360</span></a>
-                <p>Event Rentals &middot; Buckinghamshire</p>
+                                <a href="/" class="logo">VIBE<span>360</span></a>
+                <p>Event Rentals, Buckinghamshire</p>
                 <p class="fine">Bookings@VIBE360.co.uk</p>
             </div>
             <div class="footer-links">

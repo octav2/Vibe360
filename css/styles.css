@@ -1004,3 +1004,202 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
     padding-top: 16px;
 }
 .bundle-note strong { color: var(--accent); }
+
+/* =============================================================
+   VIBE360 — Location Landing Pages (reusable template)
+   ============================================================= */
+
+/* ---- Hero & micro-trust ---- */
+.service-hero .hero-ctas { flex-direction: row; gap: 14px; flex-wrap: wrap; }
+.service-hero .hero-ctas .btn { min-width: 220px; }
+.micro-trust { grid-template-columns: 1fr 1fr; }
+
+/* ---- Venue proof banner ---- */
+.venue-banner { padding: 22px 0 30px; }
+.venue-label {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-gray);
+  margin-bottom: 18px;
+}
+.venue-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.venue-pill {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  color: #cbd5e1;
+  border-radius: 9999px;
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ---- Why choose: responsive 2x2 grid ---- */
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.why-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.28);
+  transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.why-card:hover {
+  border-color: rgba(236, 72, 153, .5);
+  box-shadow: 0 10px 32px rgba(236, 72, 153, .15);
+  transform: translateY(-3px);
+}
+.why-card i { font-size: 1.7rem; color: var(--primary); flex-shrink: 0; }
+.why-card h3 { font-size: 1.15rem; margin: 0; color: #fff; }
+.why-card p { color: var(--text-gray); font-size: 0.92rem; margin: 0; }
+
+/* ---- Pricing cards ---- */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 28px;
+}
+@media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+.pricing-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.25rem;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+.pricing-card .badge-popular,
+.pricing-card .badge-bundle {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #c026d3, #e11d48);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+.card-highlight {
+  border: 1px solid rgba(236, 72, 153, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.2);
+}
+.pricing-card .price { font-size: 2.4rem; font-weight: 800; margin: 14px 0 20px; color: #fff; }
+.pricing-card ul.price-feats { list-style: none; padding: 0; margin: 0 auto 22px; text-align: left; }
+.pricing-card ul.price-feats li { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: var(--text-body); font-size: 0.9rem; }
+.pricing-card .btn { margin-top: auto; }
+
+/* ---- Coverage / surrounding areas ---- */
+.coverage-grid.loc-coverage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  justify-items: center;
+}
+@media (min-width: 640px) { .coverage-grid.loc-coverage { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .coverage-grid.loc-coverage { grid-template-columns: repeat(5, 1fr); } }
+.area-pill {
+  background: var(--dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-body);
+  padding: 8px 14px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: default;
+  transition: all .2s;
+  display: inline-flex;
+}
+.area-pill:hover { background: rgba(99, 102, 241, .1); border-color: var(--primary); color: #fff; }
+.area-pill.current { background: rgba(99, 102, 241, .15); border-color: var(--primary); color: #fff; pointer-events: none; }
+
+/* ---- FAQ accordion ---- */
+.faq-item {
+  background: var(--dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+.faq-toggle { display: none; }
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 20px;
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  color: var(--text-gray);
+  font-size: 0.92rem;
+  padding: 0 20px;
+  transition: max-height .3s ease, padding .3s ease;
+}
+.faq-toggle:checked + .faq-q + .faq-a { padding: 14px 20px; max-height: 500px; }
+
+/* ---- CTA banner ---- */
+.cta-banner { text-align: center; padding: 56px 0; }
+.cta-banner h2 { font-size: 2rem; margin-bottom: 12px; }
+.cta-banner .btn-pink { min-width: 260px; }
+
+/* ---- Email-only footer (centered, clean) ---- */
+.main-footer {
+  background: #0b0f23;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 3rem 0;
+  text-align: center;
+}
+.main-footer .footer-grid { display: block; }
+.main-footer .footer-brand,
+.main-footer .footer-links,
+.main-footer .footer-copy { margin-bottom: 1.25rem; }
+.main-footer .footer-brand .logo { display: inline-flex; }
+.main-footer .footer-brand p.fine { color: var(--text-gray); margin-top: 4px; }
+.main-footer .footer-links h4 { color: #fff; margin-bottom: 12px; font-size: 1rem; }
+.main-footer .footer-links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-footer .footer-links a { color: var(--text-body); text-decoration: none; transition: color .2s; }
+.main-footer .footer-links a:hover { color: var(--primary); }
+.main-footer .footer-copy p { color: var(--text-gray); font-size: 0.85rem; }
+
