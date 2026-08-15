@@ -573,3 +573,271 @@ footer {
     color: #ffffff;
     padding: 10px;
 }
+
+/* =============================================================
+   VIBE360 — Homepage Expansion Styles
+   ============================================================= */
+
+/* ---- Buttons (extended) ------------------------------------ */
+.btn-purple {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+.btn-purple:hover { background: linear-gradient(135deg, #4f52d4, #7c3aed); }
+.btn-accent {
+    background: linear-gradient(135deg, #f43f5e, #ec4899);
+}
+.btn-accent:hover { background: linear-gradient(135deg, #e11d48, #db2777); }
+
+/* ---- Mobile nav hamburger ---------------------------------- */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+.nav-toggle span {
+    width: 26px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ---- Micro trust bar (hero) ------------------------------- */
+.micro-trust {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.micro-trust span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+.micro-trust i { color: var(--accent); font-size: 1.05rem; }
+
+/* ---- Trust / venue banner -------------------------------- */
+.banner-heading {
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    margin-bottom: 26px;
+    font-weight: 600;
+}
+.venue-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+.venue-logo {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius);
+    padding: 18px 12px;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #94a3b8;
+    transition: color 0.3s, border-color 0.3s, transform 0.3s;
+}
+.venue-logo small {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 5px;
+}
+.venue-logo:hover { color: #fff; border-color: var(--primary); transform: translateY(-3px); }
+
+/* ---- Service Trio ----------------------------------------- */
+.service-trio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+.service-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 34px 28px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+    box-shadow: var(--glow-primary);
+}
+.service-card .service-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--primary);
+}
+.service-card:nth-child(1) .service-icon { color: #ec4899; background: rgba(236, 72, 153, 0.12); }
+.service-card:nth-child(2) .service-icon { color: #8b5cf6; background: rgba(139, 92, 246, 0.14); }
+.service-card:nth-child(3) .service-icon { color: var(--accent); background: rgba(244, 63, 94, 0.12); }
+.service-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
+.service-card .card-desc { color: var(--text-gray); font-size: 0.95rem; margin-bottom: 18px; }
+.service-card .card-feats {
+    list-style: none;
+    margin-bottom: 26px;
+    display: grid;
+    gap: 10px;
+}
+.service-card .card-feats li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+.service-card .card-feats i { color: #10b981; flex-shrink: 0; }
+.service-card .btn { margin-top: auto; text-align: center; }
+
+/* ---- Why Choose Us ---------------------------------------- */
+.why-body {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 1.05rem;
+}
+.why-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+.why-badge {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius);
+    padding: 28px 22px;
+    text-align: center;
+}
+.why-badge i { font-size: 2rem; color: var(--primary); margin-bottom: 14px; display: block; }
+.why-badge h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.why-badge p { color: var(--text-gray); font-size: 0.9rem; }
+
+/* ---- Coverage grid ---------------------------------------- */
+.coverage-intro {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px;
+    color: var(--text-gray);
+}
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+}
+.coverage-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    color: var(--text-body);
+    padding: 16px 12px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
+}
+.coverage-pill i { color: var(--primary); }
+.coverage-pill:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: var(--primary);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* ---- Reviews ----------------------------------------------- */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+.review-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+.review-card .stars {
+    color: #fbbf24;
+    font-size: 1rem;
+    margin-bottom: 14px;
+    letter-spacing: 3px;
+}
+.review-card blockquote {
+    color: var(--text-body);
+    font-size: 0.98rem;
+    margin-bottom: 20px;
+    flex: 1;
+}
+.review-card .author { border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 16px; }
+.review-card .author strong { display: block; color: #fff; font-size: 0.95rem; }
+.review-card .author span { color: var(--text-gray); font-size: 0.82rem; }
+
+/* ---- Rating summary strip ---------------------------------- */
+.rating-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+.rating-summary .fa-star { color: #fbbf24; }
+
+/* ---- Responsive (homepage additions) ----------------------- */
+@media (max-width: 768px) {
+    .nav-toggle { display: flex; }
+    .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--dark-card);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        gap: 6px;
+        display: none;
+        z-index: 100;
+    }
+    .nav { position: relative; }
+    .nav-links.open { display: flex; }
+    .micro-trust { grid-template-columns: 1fr 1fr; }
+    .hero.hero-split .hero-ctas { flex-direction: column; align-items: stretch; }
+}
