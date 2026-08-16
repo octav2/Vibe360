@@ -84,20 +84,24 @@ nav {
 .logo span { color: var(--primary); }
 /* Logo image sizing (square brand mark) */
 a.logo .nav-logo {
-    height: 44px;
+    height: 88px;
     width: auto;
     display: block;
     object-fit: contain;
 }
 .main-footer .footer-brand .nav-logo {
-    height: 60px;
+    height: 112px;
     width: auto;
     display: block;
     object-fit: contain;
 }
+@media (max-width: 768px) {
+    a.logo .nav-logo { height: 64px; }
+    .main-footer .footer-brand .nav-logo { height: 88px; }
+}
 @media (max-width: 480px) {
-    a.logo .nav-logo { height: 40px; }
-    .main-footer .footer-brand .nav-logo { height: 48px; }
+    a.logo .nav-logo { height: 56px; }
+    .main-footer .footer-brand .nav-logo { height: 80px; }
 }
 
 .nav-links {
