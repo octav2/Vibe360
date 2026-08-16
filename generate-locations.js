@@ -90,7 +90,7 @@ function navig() {
             <nav>
                 <a href="/" class="logo">VIBE<span>360</span></a>
                 <ul class="nav-links">
-                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/about-us.html">About Us</a></li>
                     <li><a href="/#services">Services</a></li>
                     <li><a href="/#pricing">Packages &amp; Pricing</a></li>
                     <li><a href="/#gallery">Gallery</a></li>
@@ -385,7 +385,7 @@ function footer() {
             <div class="footer-links">
                 <h4>Quick Links</h4>
                                 <ul>
-                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/about-us.html">About Us</a></li>
                     <li><a href="/#services">Services</a></li>
                     <li><a href="/#pricing">Packages &amp; Pricing</a></li>
                     <li><a href="/#gallery">Gallery</a></li>

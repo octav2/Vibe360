@@ -33,7 +33,7 @@ for (const f of files) {
     pinIcon: c.includes('fa-location-dot'),
     navPackages: c.includes('Packages &amp; Pricing'),
     navGallery: c.includes('href="/#gallery"'),
-    navAbout: c.includes('href="/about.html"') && !c.includes('href="/about"'),
+    navAbout: c.includes('href="/about-us.html"') && !c.includes('href="/about.html"') && !c.includes('href="/about"'),
     svcCards: c.includes('View Selfie Pod Packages') && c.includes('View 360 Spin Packages') && c.includes('View Audio Guestbook'),
     footerGallery: (c.match(/href="\/#gallery"/g) || []).length === 2, // header + footer
     coverage: c.includes('class="locations-card"'),
