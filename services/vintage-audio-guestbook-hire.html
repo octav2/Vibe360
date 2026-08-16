@@ -49,12 +49,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
 </head>
 <body>
     <header class="site-header">
         <nav>
             <div class="container header-grid">
-                <a href="/" class="logo">VIBE<span>360</span></a>
+                <a href="/" class="logo"><img src="/assets/vibe360-logo.png" alt="VIBE360 Event Rentals" class="h-10 w-auto" style="height: 40px; width: auto;"></a>
                 <button class="nav-toggle" aria-label="Toggle navigation menu">
                     <span></span><span></span><span></span>
                 </button>
@@ -166,52 +167,73 @@
     <!-- ============================================
          GALLERY: "See VIBE360 in Action"
          ============================================ -->
-    <section id="gallery" class="gallery-section section">
+            <section id="gallery" class="gallery-section section">
         <div class="container">
             <div class="section-title">
-                <h2>See VIBE360 in Action</h2>
-                <p>Watch real event moments, 360 spin clips, and custom overlay templates from recent South Buckinghamshire events.</p>
+                <h2>Listen to Audio Guestbook Recordings</h2>
+                <p>Hear real samples of customized greetings and heartfelt guest voicemails.</p>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-card">
-                    <div class="gallery-media"><i class="fa-solid fa-play"></i></div>
-                    <h3>360 Video Spin Demos</h3>
-                    <p>Slow-motion spins with custom music FX and branded overlays.</p>
+                    <div class="gallery-media"><i class="fa-solid fa-microphone"></i></div>
+                    <h3>Custom Greeting Playback</h3>
+                    <p>Listen to bespoke outgoing messages recorded by hosts.</p>
                 </div>
                 <div class="gallery-card">
-                    <div class="gallery-media"><i class="fa-solid fa-camera"></i></div>
-                    <h3>iPad Selfie Pod Overlays</h3>
-                    <p>Glam filters, custom graphic frames, and instant AirDrop sharing.</p>
+                    <div class="gallery-media"><i class="fa-solid fa-voicemail"></i></div>
+                    <h3>Real Guest Voicemail Samples</h3>
+                    <p>Authentic, unscripted voicemails captured at live events.</p>
                 </div>
                 <div class="gallery-card">
                     <div class="gallery-media"><i class="fa-solid fa-phone"></i></div>
-                    <h3>Vintage Audio Guestbook</h3>
-                    <p>Restored rotary phones capturing guest voicemails &amp; audio playback preview.</p>
+                    <h3>Rotary Phone Setup &amp; Audio Quality Demo</h3>
+                    <p>Experience the crystal-clear studio-grade audio capture.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (email-first contact, no phone numbers) -->
+            <!-- Footer (email-first contact, no phone numbers) -->
     <footer class="main-footer">
-        <div class="container footer-grid">
+        <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 60px 0 30px;">
+            <!-- COLUMN 1 (Left - Brand Info) -->
             <div class="footer-brand">
-                <a href="/" class="logo">VIBE<span>360</span></a>
-                <p class="fine"><i class="fa-solid fa-envelope"></i> <a href="mailto:Bookings@VIBE360.co.uk">Bookings@VIBE360.co.uk</a></p>
+                <a href="/" class="logo"><img src="/assets/vibe360-logo.png" alt="VIBE360 Event Rentals" class="h-10 w-auto" style="height: 40px; width: auto;"></a>
+                <p style="margin-top: 15px; color: var(--text-gray); font-size: 0.95rem;">
+                    South Bucks' premier event rental specialist offering 360 video booths, digital iPad selfie pods, and vintage audio guestbooks for weddings, galas, and private parties.
+                </p>
+                <p class="fine" style="margin-top: 15px;"><i class="fa-solid fa-envelope"></i> <a href="mailto:support@VIBE360.co.uk">support@VIBE360.co.uk</a></p>
             </div>
+            
+            <!-- COLUMN 2 (Middle - Quick Links & Core Services) -->
             <div class="footer-links">
-                <h4>Quick Links</h4>
+                <h4>Services &amp; Quick Links</h4>
                 <ul>
-                    <li><a href="/about-us.html">About Us</a></li>
-                    <li><a href="/services/ipad-selfie-pod-hire.html">Selfie Pod</a></li>
-                    <li><a href="/services/360-video-booth-hire.html">360 Booth</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/services/ipad-selfie-pod-hire.html">iPad Selfie Pod</a></li>
+                    <li><a href="/services/360-video-booth-hire.html">360 Video Booth</a></li>
                     <li><a href="/services/vintage-audio-guestbook-hire.html">Audio Guestbook</a></li>
-                    <li><a href="/check-availability.html">Book Now</a></li>
+                    <li><a href="/#vip-bundle">VIP Wedding Bundle</a></li>
+                    <li><a href="/check-availability.html" style="color: var(--accent);">Book Now / Check Availability</a></li>
                 </ul>
             </div>
-            <div class="footer-copy">
-                <p>&copy; <span id="year">2026</span> VIBE360 Event Rentals. All rights reserved.</p>
+            
+            <!-- COLUMN 3 (Right - Target Locations) -->
+            <div class="footer-links">
+                <h4>Areas We Cover in South Bucks</h4>
+                <ul>
+                    <li><a href="/locations/photo-booth-hire-beaconsfield.html">Photo Booth Hire Beaconsfield</a></li>
+                    <li><a href="/locations/photo-booth-hire-gerrards-cross.html">Photo Booth Hire Gerrards Cross</a></li>
+                    <li><a href="/locations/photo-booth-hire-marlow.html">Photo Booth Hire Marlow</a></li>
+                    <li><a href="/locations/photo-booth-hire-high-wycombe.html">Photo Booth Hire High Wycombe</a></li>
+                    <li><a href="/locations/photo-booth-hire-amersham.html">Photo Booth Hire Amersham</a></li>
+                    <li><a href="/locations/photo-booth-hire-aylesbury.html">Photo Booth Hire Aylesbury</a></li>
+                </ul>
             </div>
+        </div>
+        
+        <div class="footer-copy" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; margin-top: 20px;">
+            <p>&copy; 2026 VIBE360 Event Rentals. All rights reserved.</p>
         </div>
     </footer>
 
