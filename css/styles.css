@@ -1093,7 +1093,62 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 .why-card h3 { font-size: 1.15rem; margin: 0; color: #fff; }
 .why-card p { color: var(--text-gray); font-size: 0.92rem; margin: 0; }
 
-/* ---- Pricing cards ---- */
+/* Location Pill Grid Styling */
+.footer-locations {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-locations .footer-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.location-pill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.location-pill {
+    display: block;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.location-pill:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: var(--accent, #3b82f6);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.location-subtext {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--text-gray, #9ca3af);
+    margin-top: 5px;
+}
+
+@media (max-width: 480px) {
+    .location-pill-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Keep existing pricing-grid */
 .pricing-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1108,25 +1163,6 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
   padding: 28px;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  position: relative;
-}
-.pricing-card .badge-popular,
-.pricing-card .badge-bundle {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, #c026d3, #e11d48);
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.68rem;
-  letter-spacing: 1px;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  display: inline-block;
-}
 .card-highlight {
   border: 1px solid rgba(236, 72, 153, 0.5);
   box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.2);
