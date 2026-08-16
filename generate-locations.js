@@ -14,9 +14,9 @@ const OUT_DIR = path.join(__dirname, 'locations');
 const CHECK = '<svg class="check-ico" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
 
 const SVC = {
-  selfie: '/services/ipad-selfie-pod-hire',
-  three60: '/services/360-video-booth-hire',
-  audio: '/services/vintage-audio-guestbook-hire'
+  selfie: '/services/ipad-selfie-pod-hire.html',
+  three60: '/services/360-video-booth-hire.html',
+  audio: '/services/vintage-audio-guestbook-hire.html'
 };
 
 function head(loc) {
