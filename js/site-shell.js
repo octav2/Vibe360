@@ -90,15 +90,13 @@
             + '  <div class="container footer-grid">'
             + '    <div class="footer-brand">'
             + '      <a href="/" class="logo"><img src="/assets/logo-transparent.png" alt="VIBE360 Event Rentals" class="nav-logo" loading="lazy"></a>'
-            + '      <p class="footer-blurb">'
-            + '        South Bucks\' premier event rental specialist offering 360 video booths, digital iPad selfie pods, and vintage audio guestbooks for weddings, galas, and private parties.'
-            + '      </p>'
+            + '      <p class="footer-blurb">South Bucks\' premier event rental specialist offering 360 video booths, digital iPad selfie pods, and vintage audio guestbooks for weddings, galas, and private parties.</p>'
             + '      <p class="footer-email"><i class="fa-solid fa-envelope"></i> <a href="mailto:office@vibe360.co.uk">office@vibe360.co.uk</a></p>'
             + '    </div>'
             + '    <div class="footer-links">'
             + '      <h4>Services &amp; Quick Links</h4>'
             + '      <ul>'
-            + '        <li><a href="/#about">About Us</a></li>'
+            + '        <li><a href="/about-us.html">About Us</a></li>'
             + '        <li><a href="/services/ipad-selfie-pod-hire.html">iPad Selfie Pod</a></li>'
             + '        <li><a href="/services/360-video-booth-hire.html">360 Video Booth</a></li>'
             + '        <li><a href="/services/vintage-audio-guestbook-hire.html">Audio Guestbook</a></li>'
@@ -109,11 +107,12 @@
             + '    <div class="footer-locations">'
             + '      <h4 class="footer-heading">SERVING SOUTH &amp; CENTRAL BUCKS</h4>'
             + '      <div class="location-pill-grid">' + pillsHtml + '</div>'
-            + '      <p class="location-subtext">'
-            + '        Covering Beaconsfield, Gerrards Cross, Amersham, Chesham, Chalfont St Peter, Chalfont St Giles, Great Missenden, Marlow, High Wycombe, Stoke Poges, Aylesbury, Bourne End, Hazlemere and Penn — zero delivery surcharge.'
-            + '      </p>'
             + '    </div>'
-            + '  <p class="footer-copy">&copy; <span id="year"></span> VIBE360 Event Rentals. All rights reserved. <a href="/privacy-policy.html">Privacy Policy</a> &middot; <a href="/terms-and-conditions.html">Terms &amp; Conditions</a></p>'
+            + '  </div>'
+            + '  <div class="container footer-bottom">'
+            + '    <p class="location-subtext">Covering Beaconsfield, Gerrards Cross, Amersham, Chesham, Chalfont St Peter, Chalfont St Giles, Great Missenden, Marlow, High Wycombe, Stoke Poges, Aylesbury, Bourne End, Hazlemere and Penn — zero delivery surcharge.</p>'
+            + '    <p class="footer-copy">&copy; <span id="year"></span> VIBE360 Event Rentals. All rights reserved. <a href="/privacy-policy.html">Privacy Policy</a> &middot; <a href="/terms-and-conditions.html">Terms &amp; Conditions</a></p>'
+            + '  </div>'
             + '</footer>';
     }
 
@@ -172,12 +171,12 @@
             var t = drop.querySelector('.nav-dropdown-toggle');
             if (t) {
                 var setOpen = function (open) {
-                    drop.classList.toggle('open', open);
+                    drop.classList.toggle('is-open', open);
                     t.setAttribute('aria-expanded', open ? 'true' : 'false');
                 };
                 t.addEventListener('click', function (e) {
                     e.stopPropagation();
-                    setOpen(!drop.classList.contains('open'));
+                    setOpen(!drop.classList.contains('is-open'));
                 });
                 document.addEventListener('click', function (e) {
                     if (!drop.contains(e.target)) setOpen(false);
