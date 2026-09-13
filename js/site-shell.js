@@ -41,7 +41,7 @@
             + '      <ul class="nav-links">'
             + '        <li><a href="/about-us.html"' + (isActive === 'about' ? ' class="is-active"' : '') + '>About Us</a></li>'
             + '        <li class="nav-dropdown">'
-            + '          <a href="/#services" class="nav-dropdown-toggle' + svcToggle + '" aria-haspopup="true" aria-expanded="false">Services<span class="nav-caret"></span></a>'
+            + '          <button type="button" class="nav-dropdown-toggle' + svcToggle + '" aria-haspopup="true" aria-expanded="false">Services<span class="nav-caret" aria-hidden="true"></span></button>'
             + '          <ul class="nav-dropdown-menu">'
             + '            <li><a href="/services/ipad-selfie-pod-hire.html"' + svcActive('ipad-selfie-pod-hire.html') + '>iPad Selfie Pod</a></li>'
             + '            <li><a href="/services/360-video-booth-hire.html"' + svcActive('360-video-booth-hire.html') + '>360 Video Booth</a></li>'
@@ -113,10 +113,7 @@
             + '        Covering Beaconsfield, Gerrards Cross, Amersham, Chesham, Chalfont St Peter, Chalfont St Giles, Great Missenden, Marlow, High Wycombe, Stoke Poges, Aylesbury, Bourne End, Hazlemere and Penn — zero delivery surcharge.'
             + '      </p>'
             + '    </div>'
-            + '    <div class="footer-copy" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; margin-top: 20px;">'
-            + '      <p>&copy; <span id="year"></span> VIBE360 Event Rentals. All rights reserved.</p>'
-            + '  </div>'
-            + '  <p class="footer-copy">&copy; <span id="year"></span> VIBE360 Event Rentals. All rights reserved.</p>'
+            + '  <p class="footer-copy">&copy; <span id="year"></span> VIBE360 Event Rentals. All rights reserved. <a href="/privacy-policy.html">Privacy Policy</a> &middot; <a href="/terms-and-conditions.html">Terms &amp; Conditions</a></p>'
             + '</footer>';
     }
 
@@ -173,25 +170,20 @@
         var drop = document.querySelector('.nav-dropdown');
         if (drop) {
             var t = drop.querySelector('.nav-dropdown-toggle');
-            var menu = drop.querySelector('.nav-dropdown-menu');
-            if (t && menu) {
-                var close = function () {
-                    drop.classList.remove('open');
-                    t.setAttribute('aria-expanded', 'false');
+            if (t) {
+                var setOpen = function (open) {
+                    drop.classList.toggle('open', open);
+                    t.setAttribute('aria-expanded', open ? 'true' : 'false');
                 };
-                var onToggle = function (e) {
-                    var isOpen = drop.classList.contains('open');
-                    if (!isOpen) {
-                        e.preventDefault(); // open dropdown, don't jump yet
-                        drop.classList.add('open');
-                        t.setAttribute('aria-expanded', 'true');
-                    } else {
-                        close(); // next click: allow navigating to /#services
-                    }
-                };
-                t.addEventListener('click', onToggle);
+                t.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    setOpen(!drop.classList.contains('open'));
+                });
                 document.addEventListener('click', function (e) {
-                    if (!drop.contains(e.target)) close();
+                    if (!drop.contains(e.target)) setOpen(false);
+                });
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') setOpen(false);
                 });
             }
         }
