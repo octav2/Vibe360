@@ -1333,7 +1333,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 .main-footer .footer-locations .footer-heading { text-align: left; }
 .main-footer .location-pill-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   margin-bottom: 0;
   max-width: 100%;
@@ -1363,7 +1363,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 .main-footer .footer-copy a { color: var(--text-body); text-decoration: none; }
 .main-footer .footer-copy a:hover { color: #fff; }
 @media (max-width: 1024px) {
-  .main-footer .location-pill-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .main-footer .location-pill-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 768px) {
   .main-footer .footer-grid {
@@ -1374,7 +1374,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
       "locations";
     gap: 28px;
   }
-  .main-footer .location-pill-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .main-footer .location-pill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* ---- "See It In Action" Gallery -------------------------------- */
