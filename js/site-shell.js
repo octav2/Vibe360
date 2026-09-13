@@ -87,13 +87,13 @@
         }
         return ''
             + '<footer class="main-footer">'
-            + '  <div class="container footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 60px 0 30px;">'
+            + '  <div class="container footer-grid">'
             + '    <div class="footer-brand">'
             + '      <a href="/" class="logo"><img src="/assets/logo-transparent.png" alt="VIBE360 Event Rentals" class="nav-logo" loading="lazy"></a>'
-            + '      <p style="margin-top: 15px; color: var(--text-gray); font-size: 0.95rem;">'
+            + '      <p class="footer-blurb">'
             + '        South Bucks\' premier event rental specialist offering 360 video booths, digital iPad selfie pods, and vintage audio guestbooks for weddings, galas, and private parties.'
             + '      </p>'
-            + '      <p class="fine" style="margin-top: 15px;"><i class="fa-solid fa-envelope"></i> <a href="mailto:office@vibe360.co.uk">office@vibe360.co.uk</a></p>'
+            + '      <p class="footer-email"><i class="fa-solid fa-envelope"></i> <a href="mailto:office@vibe360.co.uk">office@vibe360.co.uk</a></p>'
             + '    </div>'
             + '    <div class="footer-links">'
             + '      <h4>Services &amp; Quick Links</h4>'
@@ -103,7 +103,7 @@
             + '        <li><a href="/services/360-video-booth-hire.html">360 Video Booth</a></li>'
             + '        <li><a href="/services/vintage-audio-guestbook-hire.html">Audio Guestbook</a></li>'
             + '        <li><a href="/vip-bundle.html">VIP Bundle</a></li>'
-            + '        <li><a href="/check-availability.html" style="color: var(--accent);">Book Now / Check Availability</a></li>'
+            + '        <li><a href="/check-availability.html">Book Now / Check Availability</a></li>'
             + '      </ul>'
             + '    </div>'
             + '    <div class="footer-locations">'
@@ -115,8 +115,8 @@
             + '    </div>'
             + '    <div class="footer-copy" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; margin-top: 20px;">'
             + '      <p>&copy; <span id="year"></span> VIBE360 Event Rentals. All rights reserved.</p>'
-            + '    </div>'
             + '  </div>'
+            + '  <p class="footer-copy">&copy; <span id="year"></span> VIBE360 Event Rentals. All rights reserved.</p>'
             + '</footer>';
     }
 
