@@ -380,7 +380,7 @@ function footer() {
             <div class="footer-brand">
                                 <a href="/" class="logo">VIBE<span>360</span></a>
                 <p>Event Rentals, Buckinghamshire</p>
-                <p class="fine"><i class="fa-solid fa-envelope"></i> <a href="mailto:Bookings@VIBE360.co.uk">Bookings@VIBE360.co.uk</a></p>
+                <p class="fine"><i class="fa-solid fa-envelope"></i> <a href="mailto:office@vibe360.co.uk">office@vibe360.co.uk</a></p>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
