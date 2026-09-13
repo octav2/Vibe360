@@ -25,7 +25,8 @@
     function headerHTML(isActive) {
         var serviceFiles = ['ipad-selfie-pod-hire.html',
                             '360-video-booth-hire.html',
-                            'vintage-audio-guestbook-hire.html'];
+                            'vintage-audio-guestbook-hire.html',
+                            'vip-bundle.html'];
         var svc = serviceFiles.indexOf(isActive) !== -1;
         var svcToggle = svc ? ' is-active' : '';
         var svcActive = function (file) {
@@ -45,6 +46,7 @@
             + '            <li><a href="/services/ipad-selfie-pod-hire.html"' + svcActive('ipad-selfie-pod-hire.html') + '>iPad Selfie Pod</a></li>'
             + '            <li><a href="/services/360-video-booth-hire.html"' + svcActive('360-video-booth-hire.html') + '>360 Video Booth</a></li>'
             + '            <li><a href="/services/vintage-audio-guestbook-hire.html"' + svcActive('vintage-audio-guestbook-hire.html') + '>Audio Guestbook</a></li>'
+            + '            <li><a href="/vip-bundle.html"' + svcActive('vip-bundle.html') + '>VIP Bundle</a></li>'
             + '          </ul>'
             + '        </li>'
             + '        <li><a href="/#pricing">Packages &amp; Pricing</a></li>'
@@ -64,19 +66,20 @@
      * ------------------------------------------------------------------ */
     function footerHTML() {
         var pills = [
-            ['Amersham', '/locations/photo-booth-hire-amersham.html'],
-            ['Aylesbury', '/locations/photo-booth-hire-aylesbury.html'],
             ['Beaconsfield', '/locations/photo-booth-hire-beaconsfield.html'],
-            ['Bourne End', '/locations/photo-booth-hire-bourne-end.html'],
-            ['Chalfont St Peter', '/locations/photo-booth-hire-chalfont-st-peter.html'],
-            ['Chesham', '/locations/photo-booth-hire-chesham.html'],
             ['Gerrards Cross', '/locations/photo-booth-hire-gerrards-cross.html'],
+            ['Amersham', '/locations/photo-booth-hire-amersham.html'],
+            ['Chesham', '/locations/photo-booth-hire-chesham.html'],
+            ['Chalfont St Peter', '/locations/photo-booth-hire-chalfont-st-peter.html'],
+            ['Chalfont St Giles', '/#areas'],
             ['Great Missenden', '/locations/photo-booth-hire-great-missenden.html'],
-            ['Hazlemere', '/locations/photo-booth-hire-hazlemere.html'],
-            ['High Wycombe', '/locations/photo-booth-hire-high-wycombe.html'],
             ['Marlow', '/locations/photo-booth-hire-marlow.html'],
-            ['Penn', '/locations/photo-booth-hire-penn.html'],
-            ['Stoke Poges', '/locations/photo-booth-hire-stoke-poges.html']
+            ['High Wycombe', '/locations/photo-booth-hire-high-wycombe.html'],
+            ['Stoke Poges', '/locations/photo-booth-hire-stoke-poges.html'],
+            ['Aylesbury', '/locations/photo-booth-hire-aylesbury.html'],
+            ['Bourne End', '/#areas'],
+            ['Hazlemere', '/#areas'],
+            ['Penn', '/#areas']
         ];
         var pillsHtml = '';
         for (var i = 0; i < pills.length; i++) {
@@ -99,7 +102,7 @@
             + '        <li><a href="/services/ipad-selfie-pod-hire.html">iPad Selfie Pod</a></li>'
             + '        <li><a href="/services/360-video-booth-hire.html">360 Video Booth</a></li>'
             + '        <li><a href="/services/vintage-audio-guestbook-hire.html">Audio Guestbook</a></li>'
-            + '        <li><a href="/#vip-bundle">VIP Wedding Bundle</a></li>'
+            + '        <li><a href="/vip-bundle.html">VIP Bundle</a></li>'
             + '        <li><a href="/check-availability.html" style="color: var(--accent);">Book Now / Check Availability</a></li>'
             + '      </ul>'
             + '    </div>'
@@ -107,7 +110,7 @@
             + '      <h4 class="footer-heading">SERVING SOUTH &amp; CENTRAL BUCKS</h4>'
             + '      <div class="location-pill-grid">' + pillsHtml + '</div>'
             + '      <p class="location-subtext">'
-            + '        Covering South &amp; Central Bucks including Marlow, Hazlemere, Great Missenden, Bourne End, Penn, Stoke Poges, Chalfont St Peter and Aylesbury villages.'
+            + '        Covering Beaconsfield, Gerrards Cross, Amersham, Chesham, Chalfont St Peter, Chalfont St Giles, Great Missenden, Marlow, High Wycombe, Stoke Poges, Aylesbury, Bourne End, Hazlemere and Penn — zero delivery surcharge.'
             + '      </p>'
             + '    </div>'
             + '    <div class="footer-copy" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; margin-top: 20px;">'
@@ -124,6 +127,7 @@
     function activeNav() {
         var p = (location.pathname || '').replace(/\/$/, '');
         if (/about-us\.html$/.test(p)) return 'about';
+        if (/vip-bundle\.html$/.test(p)) return 'vip-bundle.html';
         var m = /\/services\/([\w-]+\.html?)$/.exec(p);
         return m ? m[1] : null; // homepage, location pages, policies, etc.
     }
