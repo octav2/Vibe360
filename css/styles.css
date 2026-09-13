@@ -1,4 +1,4 @@
-﻿/* =============================================================
+/* =============================================================
    VIBE360 — Global Stylesheet
    ============================================================= */
 
@@ -543,6 +543,21 @@ footer {
     text-align: center;
     color: var(--text-gray);
     margin-top: 60px;
+}
+/* .main-footer overrides the generic rule above with left-aligned grid layout */
+.main-footer {
+    text-align: left;
+    margin-top: 0;
+    padding: 0;
+    background: #0b0f23;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+/* Nuke any stray bullet points anywhere inside the footer */
+.main-footer ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding-left: 0;
+    margin: 0;
 }
 
 /* ---- Responsive -------------------------------------------- */
@@ -1483,12 +1498,23 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 }
 .nav-dropdown-menu li a:hover { color: #fff; background: rgba(255,255,255,0.05); }
 
-/* Show on hover / keyboard focus (desktop) */
+/* Show on hover / keyboard focus (desktop) — restore opacity/visibility/pointer-events
+   so the 180ms fade transition defined above actually fires */
 .nav-dropdown:hover > .nav-dropdown-menu,
-.nav-dropdown:focus-within > .nav-dropdown-menu { display: block; }
+.nav-dropdown:focus-within > .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 
 /* Show on tap (mobile/touch, JS toggles .is-open — same pattern as FAQ .active) */
-.nav-dropdown.is-open > .nav-dropdown-menu { display: block; }
+.nav-dropdown.is-open > .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 .nav-dropdown.is-open > .nav-dropdown-toggle { color: #fff; }
 .nav-dropdown.is-open > .nav-dropdown-toggle .nav-caret { transform: rotate(225deg); }
 
@@ -1497,7 +1523,9 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 .nav-dropdown-toggle.is-active { color: var(--accent); font-weight: 700; }
 .nav-dropdown-menu li a.is-active { color: var(--accent); font-weight: 700; }
 
-/* Mobile: inline expanding panel inside the collapsed menu */
+/* Mobile: inline expanding panel inside the collapsed menu.
+   position:static cancels absolute positioning; transform must be reset
+   so the hidden translateY(6px) doesn't offset the panel. */
 @media (max-width: 768px) {
     .nav-dropdown .nav-dropdown-menu {
         position: static;
@@ -1510,7 +1538,22 @@ html { scroll-behavior: smooth; scroll-padding-top: 92px; }
         min-width: 0;
         margin: 6px 0 6px 8px;
         padding: 4px 0 4px 12px;
-        transform: none;
+        /* On mobile visibility/transform don't help — rely on opacity toggle only */
+        transform: none !important;
+        /* Hidden state on mobile: collapse via max-height instead of visibility
+           so it works inside the static stacked layout */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 200ms ease, opacity 200ms ease;
+    }
+    .nav-dropdown:hover > .nav-dropdown-menu,
+    .nav-dropdown:focus-within > .nav-dropdown-menu,
+    .nav-dropdown.is-open > .nav-dropdown-menu {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 }
 
